@@ -17,7 +17,7 @@ public class PingPongKafkaService {
     this.kafkaPingPongTemplate = kafkaPingPongTemplate;
   }
 
-  @KafkaListener(topics = "ping_pong")
+  @KafkaListener(id = "pingpong_kafka_service", topics = "ping_pong")
   public void processPingPong(String msg) {
     logger.info("Get msg: [{}]", msg);
     if (msg.equalsIgnoreCase("ping")) {

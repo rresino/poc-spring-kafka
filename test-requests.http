@@ -1,0 +1,14 @@
+
+###
+POST http://localhost:9090/ping
+
+###
+POST http://localhost:9090/user
+Content-Type: application/json
+
+{
+  "name": "John",
+  "lastname": "Doe",
+  "email": "john@doe.fake",
+  "id": "001"
+}
